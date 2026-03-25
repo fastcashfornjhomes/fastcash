@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fast Cash For NJ Homes - Sell Your House Fast</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Roboto, sans-serif; background: #f0f4f8; }
+
+@media (prefers-color-scheme: dark) {
+  body { background: #0a0e1a; }
+  .text { color: #fff; }
+  .card { background: #1a1f2e; }
+}
+
+@media (prefers-color-scheme: light) {
+  body { background: #f0f4f8; }
+  .text { color: #1a1a1a; }
+  .card { background: #fff; }
+}
+
+.hero {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e8f0f8 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero { background: linear-gradient(135deg, #0a0e1a 0%, #0f1523 100%); }
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #0066ff 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 32px;
+  opacity: 0.85;
+}
+
+.big-button {
+  padding: 20px 60px;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff5722 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+  transition: all 0.3s ease;
+}
+
+.big-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(255, 107, 53, 0.4);
+}
+
+.phone {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ff6b35;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 60px 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefit {
+  padding: 32px;
+  border-radius: 16px;
+  background: var(--card);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.benefit:hover { transform: translateY(-8px); }
+
+.benefit h3 {
+  font-size: 20px;
+  margin: 16px 0 12px;
+  color: #0066ff;
+}
+
+.benefit p {
+  font-size: 15px;
+  opacity: 0.75;
+}
+
+.benefit-icon { font-size: 48px; margin-bottom: 10px; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background-color: var(--card);
+  margin: 10% auto;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+}
+
+.close {
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+}
+
+.close:hover { color: #ff6b35; }
+
+.modal h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #0066ff 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #0066ff;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff5722 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 12px;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(255, 107, 53, 0.4);
+}
+
+.success {
+  display: none;
+  padding: 20px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border-radius: 12px;
+  margin: 20px 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  .benefits { grid-template-columns: 1fr; }
+}
+
+@media (prefers-color-scheme: dark) {
+  input, select { background: #2a3140; color: #fff; border-color: #3a4150; }
+  input::placeholder { color: #888; }
+  .close { color: #ccc; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1 class="text">Get Paid for Your Home in Days</h1>
+  <p class="text">Distressed? No problem. We buy houses as-is. No repairs needed.</p>
+  <button class="big-button" onclick="openForm()">Get Your Free Offer Now</button>
+  <div class="phone">📞 908.663.8885</div>
+</div>
+
+<div class="benefits">
+  <div class="benefit card">
+    <div class="benefit-icon">⚡</div>
+    <h3>Fast Closing</h3>
+    <p>Close in 7-10 days, not months</p>
+  </div>
+  <div class="benefit card">
+    <div class="benefit-icon">💰</div>
+    <h3>Fair Offers</h3>
+    <p>Competitive cash prices</p>
+  </div>
+  <div class="benefit card">
+    <div class="benefit-icon">✅</div>
+    <h3>No Fees</h3>
+    <p>No repairs, no commissions</p>
+  </div>
+</div>
+
+<div id="successMsg" class="success">
+  ✓ Thank you! We'll contact you within 24 hours with your offer.
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content card">
+    <span class="close" onclick="closeForm()">&times;</span>
+    <h2>Get Your Free Cash Offer</h2>
+    <p style="margin-bottom: 20px; opacity: 0.75;">Takes 2 minutes. No obligations.</p>
+    
+    <form onsubmit="submitForm(event)">
+      <div class="form-group">
+        <label>Name *</label>
+        <input type="text" id="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label>Phone *</label>
+        <input type="tel" id="phone" required>
+      </div>
+      
+      <div class="form-group">
+        <label>Email *</label>
+        <input type="email" id="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label>Property Address *</label>
+        <input type="text" id="address" required>
+      </div>
+      
+      <div class="form-group">
+        <label>Property Condition *</label>
+        <select id="condition" required>
+          <option value="">-- Select --</option>
+          <option value="Excellent">Excellent</option>
+          <option value="Good">Good</option>
+          <option value="Fair">Fair - Needs Work</option>
+          <option value="Poor">Poor - Major Repairs</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="submit-btn" id="submitBtn">Get My Offer Instantly</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("modal").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("modal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("modal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+async function submitForm(event) {
+  event.preventDefault();
+  
+  const submitBtn = document.getElementById("submitBtn");
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+  
+  const formData = {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value,
+    address: document.getElementById("address").value,
+    condition: document.getElementById("condition").value
+  };
+  
+  try {
+    // Send to Formspree (your form ID: xvzvogrd)
+    const response = await fetch("https://formspree.io/f/xvzvogrd", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        address: formData.address,
+        condition: formData.condition,
+        subject: "New Lead - " + formData.name
+      })
+    });
+    
+    // Show success
+    closeForm();
+    document.getElementById("successMsg").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("successMsg").style.display = "none";
+    }, 5000);
+    
+    event.target.reset();
+    
+  } catch (error) {
+    alert("Error sending form. Please call 908.663.8885");
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Get My Offer Instantly";
+  }
+}
+</script>
+
+</body>
+</html>
